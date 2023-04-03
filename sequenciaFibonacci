@@ -1,0 +1,30 @@
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        // Define o número a ser verificado
+        int numero = 0;
+
+        // Inicia a sequência de Fibonacci
+        int a = 0;
+        int b = 1;
+        int c;
+
+        Console.WriteLine("Digite um número: ");
+        numero = int.Parse(Console.ReadLine());
+
+        // Verifica se o número pertence à sequência
+        while (true) {
+            c = a + b;
+            if (numero == c) {
+                Console.WriteLine("{0} pertence à sequência de Fibonacci.", numero);
+                break;
+            } else if (c > numero) {
+                Console.WriteLine("{0} não pertence à sequência de Fibonacci.", numero);
+                break;
+            }
+            a = b;
+            b = c;
+        }
+    }
+}
