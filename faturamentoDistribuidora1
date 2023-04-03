@@ -1,0 +1,30 @@
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        // Como pedido no enunciado, aqui será distribuido o faturamento mensal por estado:
+        double faturamentoSP = 67836.43;
+        double faturamentoRJ = 36678.66;
+        double faturamentoMG = 29229.88;
+        double faturamentoES = 27165.48;
+        double faturamentoOutros = 19849.53;
+        
+        // Aqui já é o cálculo do faturamento total mensal
+        double faturamentoTotal = faturamentoSP + faturamentoRJ + faturamentoMG + faturamentoES + faturamentoOutros;
+        
+        // Aqui o cálculo do percentual de representação de cada estado no faturamento mensal, como solicitado no enunciado também:
+        double percentualSP = (faturamentoSP / faturamentoTotal) * 100;
+        double percentualRJ = (faturamentoRJ / faturamentoTotal) * 100;
+        double percentualMG = (faturamentoMG / faturamentoTotal) * 100;
+        double percentualES = (faturamentoES / faturamentoTotal) * 100;
+        double percentualOutros = (faturamentoOutros / faturamentoTotal) * 100;
+        
+        Console.WriteLine("Faturamento total mensal da distribuidora: R$" + faturamentoTotal.ToString("F2"));
+        Console.WriteLine("Percentual de representação de cada estado no faturamento mensal da distribuidora:");
+        Console.WriteLine("SP: " + percentualSP.ToString("F2") + "%");
+        Console.WriteLine("RJ: " + percentualRJ.ToString("F2") + "%");
+        Console.WriteLine("MG: " + percentualMG.ToString("F2") + "%");
+        Console.WriteLine("ES: " + percentualES.ToString("F2") + "%");
+        Console.WriteLine("Outros: " + percentualOutros.ToString("F2") + "%");
+    }
+}
