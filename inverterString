@@ -1,0 +1,24 @@
+class Program {
+    static void Main(string[] args) {
+
+        Console.WriteLine("Digite uma palavra: ");
+        string original = Console.ReadLine();
+        
+        // Convertendo a string em um array de caracteres
+        char[] chars = original.ToCharArray();
+        
+        // Invertendo o array de caracteres
+        for (int i = 0, j = chars.Length - 1; i < j; i++, j--) {
+            char temp = chars[i];
+            chars[i] = chars[j];
+            chars[j] = temp;
+        }
+        
+        // Convertendo o array de caracteres de volta para uma string
+        string invertida = new string(chars);
+        
+        // Exibindo a string invertida
+        Console.WriteLine("A palavra que digitou é: " + original);
+        Console.WriteLine("A palavra que digitou invertida, fica assim: " + invertida);
+    }
+}
